@@ -1,58 +1,56 @@
 <script setup>
 import { Check } from 'lucide-vue-next';
+import { openTrialModal } from '../trialStore';
 
 const plans = [
   {
     name: 'Starter',
     description: 'For small restaurants just starting out',
-    price: 'Rp 500K',
-    tableLimit: 'Up to 6 tables',
+    price: 'Rp 750k',
+    tableLimit: 'Up to 6 tables per outlet',
     features: [
       'Smart Reservation Engine',
       'Full Analytics Dashboard',
       'Customer Management (CRM)',
-      'SMS & Email Notifications',
       'Real-time Availability',
       'Mobile Friendly',
       'Member Area (Video Tutorials & Announcements)',
-      'API Integration'
+      'SLA 99.9% Uptime',
+      'Local Support'
     ],
     isPopular: false
   },
   {
     name: 'Standard',
     description: 'For growing mid-size restaurants',
-    price: 'Rp 750K',
-    tableLimit: 'Up to 20 tables',
+    price: 'Rp 1.5K',
+    tableLimit: 'Up to 15 tables per outlet',
     features: [
       'Smart Reservation Engine',
       'Full Analytics Dashboard',
       'Customer Management (CRM)',
-      'SMS & Email Notifications',
       'Real-time Availability',
       'Mobile Friendly',
       'Member Area (Video Tutorials & Announcements)',
-      'API Integration',
-      'SLA 99.9% Uptime'
+      'SLA 99.9% Uptime',
+      'Local Support'
     ],
     isPopular: true
   },
   {
     name: 'Premium',
     description: 'For large & multi-branch restaurants',
-    price: 'Rp 1 Juta',
-    tableLimit: 'More than 20 tables',
+    price: 'Rp 2 Juta',
+    tableLimit: 'More than 15 tables per outlet',
     features: [
       'Smart Reservation Engine',
       'Full Analytics Dashboard',
       'Customer Management (CRM)',
-      'SMS & Email Notifications',
       'Real-time Availability',
       'Mobile Friendly',
       'Member Area (Video Tutorials & Announcements)',
-      'API Integration',
       'SLA 99.9% Uptime',
-      'Priority Support 24/7'
+      'Local Support'
     ],
     isPopular: false
   }
@@ -118,7 +116,8 @@ const plans = [
 
           <!-- CTA Button -->
           <button 
-            class="w-full py-3 rounded-lg font-medium transition-colors duration-300 mt-auto"
+            @click="openTrialModal"
+            class="w-full py-3 rounded-lg font-medium transition-colors duration-300 mt-auto cursor-pointer"
             :class="[
               plan.isPopular 
                 ? 'bg-[#d4a373] text-[#12100e] hover:bg-[#c29262]' 

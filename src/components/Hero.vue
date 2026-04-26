@@ -1,5 +1,6 @@
 <script setup>
 import { Play } from 'lucide-vue-next';
+import { openTrialModal } from '../trialStore';
 </script>
 
 <template>
@@ -39,14 +40,17 @@ import { Play } from 'lucide-vue-next';
 
         <!-- Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 pt-6">
-          <button class="px-8 py-3 bg-[#d4a373] hover:bg-[#c29262] text-black font-semibold rounded text-lg transition-colors duration-300">
-            Book a Demo
+          <button 
+            @click="openTrialModal"
+            class="px-8 py-3 bg-[#d4a373] hover:bg-[#c29262] text-black font-semibold rounded text-lg transition-colors duration-300 cursor-pointer"
+          >
+            Start Free Trial
           </button>
           
-          <button class="px-8 py-3 border border-white/30 hover:border-white hover:bg-white/10 text-white font-medium rounded text-lg flex items-center justify-center transition-all duration-300 group">
+          <!-- <button class="px-8 py-3 border border-white/30 hover:border-white hover:bg-white/10 text-white font-medium rounded text-lg flex items-center justify-center transition-all duration-300 group">
             <Play class="w-5 h-5 mr-2 fill-current group-hover:scale-110 transition-transform" />
             Watch Demo On-Demand
-          </button>
+          </button> -->
         </div>
 
       </div>

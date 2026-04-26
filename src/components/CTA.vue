@@ -1,5 +1,5 @@
 <script setup>
-// No props needed
+import { openTrialModal } from '../trialStore';
 </script>
 
 <template>
@@ -22,14 +22,17 @@
           </p>
 
           <!-- Button -->
-          <button class="bg-[#d4a373] hover:bg-[#c29262] text-[#12100e] font-semibold text-lg px-8 py-4 rounded-lg transition-all duration-300 shadow-[0_4px_14px_0_rgba(212,163,115,0.39)] hover:shadow-[0_6px_20px_rgba(212,163,115,0.23)] hover:-translate-y-1 mb-6">
+          <button 
+            @click="openTrialModal"
+            class="bg-[#d4a373] hover:bg-[#c29262] text-[#12100e] font-semibold text-lg px-8 py-4 rounded-lg transition-all duration-300 shadow-[0_4px_14px_0_rgba(212,163,115,0.39)] hover:shadow-[0_6px_20px_rgba(212,163,115,0.23)] hover:-translate-y-1 mb-6 cursor-pointer"
+          >
             Try Free for 14 Days
           </button>
 
           <!-- Footer Text -->
-          <p class="text-sm text-gray-500 font-medium">
+          <!-- <p class="text-sm text-gray-500 font-medium">
             No credit card required • Setup in 5 minutes
-          </p>
+          </p> -->
         </div>
       </div>
     </div>

@@ -1,20 +1,20 @@
 <script setup>
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
 import Navbar from './components/Navbar.vue';
-import Hero from './components/Hero.vue';
-import DemoVideo from './components/DemoVideo.vue';
-import KeyFeatures from './components/KeyFeatures.vue';
-import Pricing from './components/Pricing.vue';
-import CTA from './components/CTA.vue';
+import TrialModal from './components/TrialModal.vue';
+
+const route = useRoute();
+const showNavbar = computed(() => {
+  return route.name !== 'Login' && route.name !== 'Admin';
+});
 </script>
 
 <template>
   <div class="bg-[#121212] min-h-screen text-white font-sans overflow-x-hidden">
-    <Navbar />
-    <Hero />
-    <DemoVideo />
-    <KeyFeatures />
-    <Pricing />
-    <CTA />
+    <Navbar v-if="showNavbar" />
+    <router-view />
+    <TrialModal />
   </div>
 </template>
 

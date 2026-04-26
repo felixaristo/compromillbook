@@ -1,5 +1,5 @@
 <script setup>
-// No props needed for now
+import demoVideo from '../assets/video.mp4';
 </script>
 
 <template>
@@ -21,16 +21,16 @@
       </p>
 
       <!-- Video Container -->
-      <div class="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-white/10 aspect-video group">
-        <!-- Using YouTube Embed with the classic Rick Roll ID as per screenshot -->
-        <iframe 
-          class="absolute top-0 left-0 w-full h-full"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=Ad-gJq-yX4-hW-6-" 
-          title="MillBook Demo Video" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen
-        ></iframe>
+      <div class="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-white/10 aspect-video group bg-black">
+        <video 
+          class="w-full h-full object-cover"
+          controls
+          playsinline
+          preload="metadata"
+        >
+          <source :src="demoVideo" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </section>
