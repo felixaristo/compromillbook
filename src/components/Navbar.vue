@@ -32,7 +32,7 @@ const handleLogout = () => {
     <!-- Logo -->
     <div class="flex items-center">
       <button @click="goToHome" class="cursor-pointer">
-        <img :src="logo" alt="MillBook Logo" class="h-14 w-auto object-contain rounded-lg" />
+        <img :src="logo" alt="MillBook Logo" class="h-17 w-17 object-cover rounded-full" />
       </button>
     </div>
 

@@ -15,7 +15,7 @@ const plans = [
       'Real-time Availability',
       'Mobile Friendly',
       'Member Area (Video Tutorials & Announcements)',
-      'SLA 99.9% Uptime',
+      '99.996% Uptime Server Over the Last 12 Months',
       'Local Support'
     ],
     isPopular: false
@@ -32,7 +32,7 @@ const plans = [
       'Real-time Availability',
       'Mobile Friendly',
       'Member Area (Video Tutorials & Announcements)',
-      'SLA 99.9% Uptime',
+      '99.996% Uptime Server Over the Last 12 Months',
       'Local Support'
     ],
     isPopular: true
@@ -49,7 +49,7 @@ const plans = [
       'Real-time Availability',
       'Mobile Friendly',
       'Member Area (Video Tutorials & Announcements)',
-      'SLA 99.9% Uptime',
+      '99.996% Uptime Server Over the Last 12 Months',
       'Local Support'
     ],
     isPopular: false

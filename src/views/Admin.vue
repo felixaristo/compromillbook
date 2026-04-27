@@ -105,7 +105,7 @@ const logout = () => {
     <!-- Sidebar -->
     <aside class="w-64 bg-[#1a1a1a] border-r border-white/5 flex flex-col">
       <div class="p-6">
-        <img :src="logo" alt="MillBook Logo" class="h-14 w-auto object-contain cursor-pointer rounded-lg" @click="router.push('/')" />
+        <img :src="logo" alt="MillBook Logo" class="h-14 w-14 object-cover cursor-pointer rounded-full" @click="router.push('/')" />
       </div>
       
       <nav class="flex-1 px-4 space-y-2">

@@ -36,7 +36,7 @@ const features = [
   },
   {
     title: 'Data Security',
-    description: 'Your restaurant and customer data is protected with enterprise-grade encryption.',
+    description: 'Your restaurant and customer data is protected with enterprise grade standard.',
     icon: ShieldCheck
   }
 ];
