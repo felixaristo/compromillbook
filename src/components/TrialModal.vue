@@ -23,11 +23,22 @@ const roles = [
   'Others'
 ];
 
-const handleSubmit = () => {
+const handleSubmit = async () => {
   isSubmitting.value = true;
-  // Simulate API call
-  setTimeout(() => {
-    isSubmitting.value = false;
+  try {
+    const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:7500';
+    const response = await fetch(`${baseUrl}/user-trial`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(form.value),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to submit trial request');
+    }
+
     isSuccess.value = true;
     // Reset form after 2 seconds and close
     setTimeout(() => {
@@ -41,7 +52,12 @@ const handleSubmit = () => {
       };
       closeTrialModal();
     }, 2000);
-  }, 1500);
+  } catch (error) {
+    console.error('Error submitting trial request:', error);
+    // You might want to add a proper error state to the UI here
+  } finally {
+    isSubmitting.value = false;
+  }
 };
 </script>
 
