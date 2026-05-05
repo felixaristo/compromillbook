@@ -49,13 +49,13 @@ const handleLogout = () => {
 
       <template v-if="!isDashboard">
         <!-- Member Login Button -->
-        <!-- <button 
+        <button 
           @click="goToLogin"
           class="flex items-center px-4 py-2 text-sm font-medium text-white border border-gray-600 rounded hover:bg-white/10 transition-colors cursor-pointer"
         >
           <LogIn class="w-4 h-4 mr-2" />
           Member Login
-        </button> -->
+        </button>
 
         <!-- Start Free Trial Button -->
         <button 
