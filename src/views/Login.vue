@@ -46,6 +46,7 @@ const handleLogin = async (e) => {
     // Save token to localStorage
     if (data.data.access_token) {
       localStorage.setItem('access_token', data.data.access_token);
+      localStorage.setItem('user', data.data.user.fullname);
     }
     
     // Redirect based on role

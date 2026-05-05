@@ -25,6 +25,8 @@ const goToHome = () => {
 const handleLogout = () => {
   router.push('/');
 };
+
+const user = computed(() => localStorage.getItem('user'));
 </script>
 
 <template>
@@ -69,18 +71,18 @@ const handleLogout = () => {
       <template v-else>
         <!-- Profile / Logout for Dashboard -->
         <div class="flex items-center space-x-6">
-          <button 
+          <!-- <button 
             @click="goToAdmin"
             class="text-gray-400 hover:text-[#d4a373] text-sm font-medium transition-colors"
           >
             Admin Panel
-          </button>
-          <div class="flex items-center space-x-4 border-l border-white/10 pl-6">
+          </button> -->
+          <div class="flex items-center space-x-4">
             <button class="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors">
             <div class="w-8 h-8 bg-[#242424] rounded-full flex items-center justify-center border border-white/10">
               <User class="w-4 h-4 text-[#d4a373]" />
             </div>
-            <span class="text-sm font-medium">John Doe</span>
+            <span class="text-sm font-medium">{{ user }}</span>
           </button>
           <button 
             @click="handleLogout"
