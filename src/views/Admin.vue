@@ -537,6 +537,8 @@ watch(activeMenu, (newMenu) => {
 });
 
 const logout = () => {
+  localStorage.removeItem('access_token');
+  localStorage.removeItem('user');
   router.push('/');
 };
 </script>
